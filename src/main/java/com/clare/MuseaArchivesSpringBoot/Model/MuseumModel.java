@@ -33,8 +33,8 @@ public class MuseumModel implements Serializable {
 
 	private String City;
 	
-	@NotBlank
-	private String PostCode;
+	
+	private String postcode;
 	
 
 	private String Contact_Email;
@@ -100,12 +100,12 @@ public class MuseumModel implements Serializable {
 
 
 	public String getPostCode() {
-		return PostCode;
+		return postcode;
 	}
 
 
-	public void setPostCode(String vPostCode) {
-		this.PostCode = vPostCode;
+	public void setPostCode(String vPostcode) {
+		this.postcode = vPostcode;
 	}
 
 
