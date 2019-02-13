@@ -16,6 +16,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Table(name = "Museums")
 @EntityListeners(AuditingEntityListener.class)
 public class MuseumModel implements Serializable {
+	
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +29,7 @@ public class MuseumModel implements Serializable {
 	@NotBlank
 	private String Address_Line_1;
 	
-
-	private String Address_Line_2;
+    private String Address_Line_2;
 	
 
 	private String City;
@@ -50,12 +51,39 @@ public class MuseumModel implements Serializable {
 	
 
 	private String Category;
+	
+	
 
-
-	public Long getMuseum_id() {
-		return Museum_ID;
+	public MuseumModel() {
 	}
 
+
+	public MuseumModel( String vName, String vAddress_Line_1, String vAddress_Line_2, 
+			String vCity, String vPostcode,
+			String vContact_Email, String vContact_Number, 
+			String vAdmission, String vWebsite, String vCategory) {
+		   
+		super();
+
+		this.Name = vName;
+		this.Address_Line_1 = vAddress_Line_1;
+		this.Address_Line_2 = vAddress_Line_2;
+		this.City = vCity;
+		this.postcode = vPostcode;
+		this.Contact_Email = vContact_Email;
+		this.Contact_Number = vContact_Number;
+		this.Admission = vAdmission;
+		this.Website = vWebsite;
+		this.Category = vCategory;
+		
+	}
+
+	
+	
+	
+	public Long getMuseum_ID() {
+		return Museum_ID;
+	}
 
 
 
@@ -65,7 +93,7 @@ public class MuseumModel implements Serializable {
 
 
 	public void setName(String vName) {
-		this.Name = vName;
+		Name = vName;
 	}
 
 
@@ -74,8 +102,8 @@ public class MuseumModel implements Serializable {
 	}
 
 
-	public void setAddress_Line_1(String vAddress_Line_1) {
-		this.Address_Line_1 = vAddress_Line_1;
+	public void setAddress_Line_1(String address_Line_1) {
+		Address_Line_1 = address_Line_1;
 	}
 
 
@@ -84,8 +112,8 @@ public class MuseumModel implements Serializable {
 	}
 
 
-	public void setAddress_Line_2(String vAddress_Line_2) {
-		this.Address_Line_2 = vAddress_Line_2;
+	public void setAddress_Line_2(String address_Line_2) {
+		Address_Line_2 = address_Line_2;
 	}
 
 
@@ -94,18 +122,18 @@ public class MuseumModel implements Serializable {
 	}
 
 
-	public void setCity(String vCity) {
-		this.City = vCity;
+	public void setCity(String city) {
+		City = city;
 	}
 
 
-	public String getPostCode() {
+	public String getPostcode() {
 		return postcode;
 	}
 
 
-	public void setPostCode(String vPostcode) {
-		this.postcode = vPostcode;
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
 	}
 
 
@@ -114,8 +142,8 @@ public class MuseumModel implements Serializable {
 	}
 
 
-	public void setContact_Email(String vContact_Email) {
-		this.Contact_Email = vContact_Email;
+	public void setContact_Email(String contact_Email) {
+		Contact_Email = contact_Email;
 	}
 
 
@@ -124,8 +152,8 @@ public class MuseumModel implements Serializable {
 	}
 
 
-	public void setContact_Number(String vContact_Number) {
-		this.Contact_Number = vContact_Number;
+	public void setContact_Number(String contact_Number) {
+		Contact_Number = contact_Number;
 	}
 
 
@@ -134,8 +162,8 @@ public class MuseumModel implements Serializable {
 	}
 
 
-	public void setAdmission(String vAdmission) {
-		this.Admission = vAdmission;
+	public void setAdmission(String admission) {
+		Admission = admission;
 	}
 
 
@@ -144,8 +172,8 @@ public class MuseumModel implements Serializable {
 	}
 
 
-	public void setWebsite(String vWebsite) {
-		this.Website = vWebsite;
+	public void setWebsite(String website) {
+		Website = website;
 	}
 
 
@@ -154,11 +182,15 @@ public class MuseumModel implements Serializable {
 	}
 
 
-	public void setCategory(String vCategory) {
-		this.Category = vCategory;
+	public void setCategory(String category) {
+		Category = category;
 	}
+
+
 	
 	
+
+
 
 	
 }
