@@ -26,7 +26,7 @@ public class MuseumModel implements Serializable {
 	@NotBlank
 	private String Name;
 	
-	@NotBlank
+	
 	private String Address_Line_1;
 	
     private String Address_Line_2;
