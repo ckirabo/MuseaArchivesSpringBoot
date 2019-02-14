@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.clare</groupId>
 	<artifactId>MuseaArchivesSpringBoot</artifactId>
@@ -27,13 +27,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<dependency>
-		<groupId>com.h2database</groupId>
-		<artifactId>h2</artifactId>
-		<scope>test</scope>
-		<version>1.4.194</version>
-		
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+			<version>1.4.194</version>
+
 		</dependency>
 
 		<dependency>
@@ -51,6 +51,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+	
 	</dependencies>
 
 	<build>
